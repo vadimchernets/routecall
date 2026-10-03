@@ -1,5 +1,7 @@
 # routecall
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23116728.svg)](https://doi.org/10.5281/zenodo.23116728)
+
 The strong model thinks, cheap and local models work — and nobody loses the remote on their phone. A
 [Claude Code](https://claude.com/claude-code) plugin of Poly A1, for the person in a company who sets AI up.
 Repository: [github.com/vadimchernets/routecall](https://github.com/vadimchernets/routecall).
