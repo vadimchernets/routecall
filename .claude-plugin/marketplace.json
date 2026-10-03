@@ -3,14 +3,14 @@
   "owner": { "name": "Vadym Chernets" },
   "metadata": {
     "description": "routecall: the strong model thinks, cheap and local models work - a cheap window per project, a red window on this computer, scripts on API rows only, a gateway for CI. Buys nothing.",
-    "version": "0.1.2"
+    "version": "0.1.3"
   },
   "plugins": [
     {
       "name": "routecall",
       "source": "./",
       "description": "Advisor, opusplan and Haiku subagents; a cheap per-project window for DeepSeek, Kimi, Qwen, GLM, MiniMax or MiMo with the key in the keychain; a red window on a local model; local model sizing and load; crew on API rows only; LiteLLM gateway for CI; doctor. Buys nothing.",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "author": { "name": "Vadym Chernets" },
       "license": "Apache-2.0",
       "keywords": ["routing", "cheap-models", "local-models", "for-companies"],

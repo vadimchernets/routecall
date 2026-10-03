@@ -6,8 +6,8 @@ The strong model thinks, cheap and local models work — and nobody loses the re
 [Claude Code](https://claude.com/claude-code) plugin of Poly A1, for the person in a company who sets AI up.
 Repository: [github.com/vadimchernets/routecall](https://github.com/vadimchernets/routecall).
 
-**routecall routes and measures; it buys nothing, opens no checkout and never asks for a card or a key in the
-chat.** What each route costs comes from billcall's dated price table (`billcall estimate`); the person
+**routecall routes and measures; it buys nothing, and a key goes straight into the system keychain.** What each
+route costs comes from billcall's dated price table (`billcall estimate`); the person
 responsible for the company's accounts buys, from the vendor's own page.
 
 ## The rule it is built on
@@ -55,9 +55,10 @@ Model Studio `dashscope-intl.aliyuncs.com/apps/anthropic` (US and workspace addr
   rules from claude.ai's server-managed settings (if the organisation sets them) and `~/.claude/settings.json`.
 - `local` on an Apple M5 with 16 GB: lead model `gpt-oss-20b`; on call Qwen3.5-4B, Qwen3-Embedding-0.6B, Gemma 4 E4B,
   GLM-4.7-Flash.
-- `local load`: no local model server runs on that machine (Ollama, LM Studio and llama-swap ports checked), so there
-  is no number from it yet; it answers with exit 3 and says so. The measurement itself is tested against a stand-in
-  server in `tests/test_routecall.py`. On a machine with Ollama: `routecall local load` gives the figure.
+- `local load`: measures a running Ollama, LM Studio or llama-swap server — tokens a second for one request and for
+  N at once, and the people it holds; the measurement is tested against a stand-in server in
+  `tests/test_routecall.py`. The author's Mac ran no local server that day, and `local load` answered with exit 3
+  and the install line for Ollama.
 
 ## What it needs
 

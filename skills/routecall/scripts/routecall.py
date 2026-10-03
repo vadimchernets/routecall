@@ -613,7 +613,7 @@ def local_pick(ram):
     ram = round(ram)
     if ram < tiers[0]["min_gb"]:
         return {"ram": ram, "lead": None, "on_call": tiers[0]["on_call"][:2], "hardware_rows": tiers[0]["hardware_rows"],
-                "note": "below 16 GB a local model is a small helper only (embeddings, sorting), not an agent"}
+                "note": "below 16 GB a local model is the helper (embeddings, sorting); the agent lead starts at 16 GB"}
     for t in tiers:
         if t["min_gb"] <= ram <= t["max_gb"]:
             return {"ram": ram, "lead": t["lead"], "on_call": t["on_call"], "hardware_rows": t["hardware_rows"], "note": ""}

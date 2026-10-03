@@ -16,7 +16,7 @@ and no `&` — `${CLAUDE_PLUGIN_ROOT}/hooks/python.ps1 routecall say skills/rout
 on one line; that is the form this skill's permission covers. Only if that path has a space in it, write
 `& "${CLAUDE_PLUGIN_ROOT}/hooks/python.ps1" …` instead (the person is then asked once). Never call `python3`,
 `python` or `py` yourself: the launcher finds a real Python 3.8+ and never starts the Microsoft Store or Apple stub.
-If it answers with one line saying routecall "is paused" because this computer has no working Python 3 yet, tell
+If it answers with one line saying routecall "is paused" until this computer has Python 3, tell
 the person that in one plain line and stop.
 
 The user said: $ARGUMENTS

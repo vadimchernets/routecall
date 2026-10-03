@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — 2026-10-03
+
+- Wording: no disclaimers. README states what `local load` measures; the low-memory note of `local` names what
+  such a machine runs and where the agent lead starts.
+- Tests: a tone check reddens on disclaimers, excuses and apologies in what people read (five languages).
+
 ## 0.1.2 — 2026-10-03
 
 - README: the Zenodo DOI badge (the concept DOI always points to the latest version).
