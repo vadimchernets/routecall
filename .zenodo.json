@@ -1,0 +1,8 @@
+{
+  "title": "routecall: the strong model thinks, cheap and local models work - in Claude Code, without losing the remote",
+  "description": "routecall is a Claude Code plugin that lowers what AI costs a company without making it weaker, by giving each kind of work its own model. Inside the person's own seat it sets up the advisor tool, opusplan and subagents on a cheaper model. For a cheaper vendor (DeepSeek, Kimi, Qwen, GLM, MiniMax, MiMo) it writes a separate per-project window - a settings file and a launcher that reads the API key from the system keychain - and says what does not work there (Remote Control, cloud sessions, the advisor, server-managed settings) and where the window's rules come from; the company's red folders are denied in it or left out of a sparse git worktree. A red window runs on a model on the same computer with cloud features and non-essential traffic off. It sizes a local model for the machine, measures a running local server and counts how many people it holds, runs other vendors' own command-line agents for scripts only on pay-as-you-go API rows, writes a LiteLLM gateway config for CI with the company's daily budget and Presidio masking, a llama-swap config for an own server, and a doctor report. It reads the shared company-ai-policy.json. Python standard library only; it reaches nothing but a model server on the same computer, and buys nothing.",
+  "creators": [{ "name": "Chernets, Vadym" }],
+  "upload_type": "software",
+  "license": "apache-2.0",
+  "keywords": ["claude-code-plugin", "model-routing", "local-llm", "ollama", "litellm", "cost", "for-companies"]
+}

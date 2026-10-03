@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "updated": "2026-10-02",
+  "about": "Which local model to run as the lead and which on call, by the machine's memory. From the plan of the track, section 0.4 (checked 02.10.2026 on the model cards and the hardware vendors' pages); prices of the machines are rows of billcall's price table. Names are model names, not tags of one server: ask the server what it calls them (ollama list, lms ls).",
+  "connect": {
+    "ollama": "ollama launch claude (Ollama 0.15+), context 64k or more; OLLAMA_NO_CLOUD=1 for red work",
+    "lmstudio": "ANTHROPIC_BASE_URL=http://localhost:1234, ANTHROPIC_AUTH_TOKEN=lmstudio",
+    "llama.cpp / llama-swap": "both speak v1/messages"
+  },
+  "tiers": [
+    {"min_gb": 16, "max_gb": 31, "lead": "gpt-oss-20b", "lead_32gb": "Qwen3.6-35B-A3B q4", "on_call": ["Qwen3.5-4B", "Qwen3-Embedding-0.6B", "Gemma 4 E4B", "GLM-4.7-Flash"], "hardware_rows": ["apple-mac-mini-m6"]},
+    {"min_gb": 32, "max_gb": 63, "lead": "Qwen3.6-35B-A3B q4", "on_call": ["Qwen3.5-4B", "Qwen3-Embedding-0.6B", "Gemma 4 E4B", "GLM-4.7-Flash"], "hardware_rows": ["apple-mac-mini-m6"]},
+    {"min_gb": 64, "max_gb": 255, "lead": "Qwen3.6-35B-A3B q8 or Qwen3-Coder-Next q4", "on_call": ["Qwen3.6-27B", "gpt-oss-120b", "Qwen3-Embedding-4B", "Qwen3-Reranker-4B"], "hardware_rows": ["nvidia-dgx-spark", "framework-desktop-ryzen-ai-max-395-128gb", "dell-pro-max-gb10", "apple-mac-studio-m5-ultra-96gb"]},
+    {"min_gb": 256, "max_gb": 4096, "lead": "DeepSeek-V4-Flash", "on_call": ["Qwen3.6", "GLM-5.3-Flash"], "hardware_rows": ["apple-mac-studio-m5-ultra-256gb"]},
+    {"gpu_gb": 96, "lead": "Qwen3.6-27B FP8", "on_call": ["gpt-oss-120b", "Qwen3-Coder-Next", "Gemma 4 31B"], "hardware_rows": ["nvidia-rtx-pro-6000-96gb"]},
+    {"gpus": 8, "lead": "DeepSeek-V4-Pro (H200/B200) or DeepSeek-V4-Flash (H100)", "on_call": ["MiniMax-M3", "GLM-5.3", "Kimi K2.7-Code"], "hardware_rows": ["runpod-h100-sxm", "lambda-h100-sxm"]}
+  ],
+  "load": {
+    "need_tps": 20,
+    "active_share": 0.25,
+    "why": "Assumptions of 'local load', both changeable: a person working with an agent reads comfortably at about 20 output tokens a second while a request runs, and a request runs about a quarter of their working time. People a machine holds = measured total tokens per second / (need_tps x active_share)."
+  }
+}

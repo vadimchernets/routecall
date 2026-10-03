@@ -1,0 +1,17 @@
+{
+  "name": "Português",
+  "banner_base_url": "Nesta janela o Claude Code fala com {host}: o controle remoto, as sessões na nuvem, o conselheiro e as configurações gerenciadas pelo servidor da sua organização não funcionam aqui. A sua janela habitual do Claude mantém todos eles.",
+  "banner_rules": "As regras desta janela vêm de: {sources}.",
+  "banner_key": "A chave é lida do chaveiro do sistema quando a janela abre; nunca é gravada em arquivo.",
+  "red_window": "Janela vermelha: o modelo roda neste computador, a nuvem do Ollama está desligada e o Claude Code não envia nada de que não precise. O controle remoto fica desligado só nesta janela.",
+  "doctor_remote_ok": "Controle remoto: disponível com esta configuração.",
+  "doctor_remote_off": "Controle remoto: indisponível aqui - {why}.",
+  "doctor_base": "As requisições vão para: {where}.",
+  "doctor_rules": "Regras que valem neste computador: {sources}.",
+  "doctor_advisor_off": "Conselheiro: desligado aqui - {why}.",
+  "policy_denied": "A política da empresa não permite {vendor} ({why}).",
+  "crew_refused": "{member} não é iniciado: {why}.",
+  "gateway_people": "Um gateway é só para scripts e CI: atrás dele as pessoas perderiam o controle remoto e as regras da organização. As pessoas recebem uma janela de perfil.",
+  "local_none": "Nenhum servidor de modelos local responde neste computador (tentado {tried}).",
+  "local_load": "{model}: {single} tokens por segundo com uma requisição, {total} com {n} ao mesmo tempo - o bastante para cerca de {people} pessoas trabalhando com um agente."
+}

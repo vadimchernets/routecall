@@ -1,0 +1,17 @@
+{
+  "name": "Español",
+  "banner_base_url": "En esta ventana Claude Code habla con {host}: el control remoto, las sesiones en la nube, el asesor y la configuración gestionada por el servidor de su organización no funcionan aquí. Su ventana habitual de Claude los conserva todos.",
+  "banner_rules": "Las reglas de esta ventana vienen de: {sources}.",
+  "banner_key": "La clave se lee del llavero del sistema al abrir la ventana; nunca se escribe en un archivo.",
+  "red_window": "Ventana roja: el modelo trabaja en este ordenador, la nube de Ollama está apagada y Claude Code no envía nada que no necesite. El control remoto está apagado solo en esta ventana.",
+  "doctor_remote_ok": "Control remoto: disponible con esta configuración.",
+  "doctor_remote_off": "Control remoto: no disponible aquí - {why}.",
+  "doctor_base": "Las peticiones van a: {where}.",
+  "doctor_rules": "Reglas que rigen este ordenador: {sources}.",
+  "doctor_advisor_off": "Asesor: apagado aquí - {why}.",
+  "policy_denied": "La política de la empresa no permite {vendor} ({why}).",
+  "crew_refused": "{member} no se inicia: {why}.",
+  "gateway_people": "Una pasarela es solo para scripts y CI: detrás de ella las personas perderían el control remoto y las reglas de la organización. Las personas reciben una ventana de perfil.",
+  "local_none": "Ningún servidor de modelos local responde en este ordenador (probado {tried}).",
+  "local_load": "{model}: {single} tokens por segundo con una petición, {total} con {n} a la vez - suficiente para unas {people} personas trabajando con un agente."
+}

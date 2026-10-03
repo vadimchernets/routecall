@@ -1,0 +1,17 @@
+routecall
+Copyright 2026 Vadym Chernets
+
+This product includes software developed by Vadym Chernets, as part of Poly A1.
+
+No third-party code is included. routecall writes configuration files for programs it does not ship:
+LiteLLM (MIT outside its enterprise/ folder, github.com/BerriAI/litellm), llama-swap (MIT,
+github.com/mostlygeek/llama-swap), llama.cpp (MIT), Ollama (MIT), Presidio (MIT) as a LiteLLM guardrail.
+Reading a key from the system keychain follows the pattern of mailcall (Poly A1, Apache-2.0).
+
+Public references (as read on 2026-10-02; every entry of data/*.json names its own page and day):
+- Remote Control and the variables that turn it off: https://code.claude.com/docs/en/remote-control
+- Managed settings, managed-settings.d and the order of managed sources: https://code.claude.com/docs/en/managed-settings
+- The advisor tool: https://code.claude.com/docs/en/advisor
+- Model aliases, opusplan, CLAUDE_CODE_SUBAGENT_MODEL: https://code.claude.com/docs/en/model-config
+- The vendors' Anthropic-compatible addresses: data/endpoints.json
+- The LiteLLM incident of 24.03.2026: https://docs.litellm.ai/blog/security-update-march-2026

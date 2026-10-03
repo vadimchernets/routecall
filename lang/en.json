@@ -1,0 +1,33 @@
+{
+  "name": "English",
+  "_purpose": {
+    "banner_base_url": "first line of the banner when a profile window points Claude Code away from Anthropic; the person decides from it which window to use for what - plain, never alarming",
+    "banner_rules": "where the rules of that window come from; {sources} is a list of file names",
+    "banner_key": "reassures that the API key never lands in a file",
+    "red_window": "banner of the window for red (confidential) work that runs only on this computer",
+    "doctor_remote_ok": "doctor: Remote Control works with this setup",
+    "doctor_remote_off": "doctor: Remote Control does not work; {why} names the variable or the address",
+    "doctor_base": "doctor: where Claude Code sends requests; {where} is an address and the file that set it",
+    "doctor_rules": "doctor: which managed rules apply; {sources} is a list",
+    "doctor_advisor_off": "doctor: the advisor tool is off; {why} names the cause",
+    "policy_denied": "the company policy forbids a vendor; {vendor} and {why}",
+    "crew_refused": "a crew member is not started; {member} and {why}",
+    "gateway_people": "why a gateway is never written for people",
+    "local_none": "no local model server answered; {tried} is a list of addresses",
+    "local_load": "result of the load measurement in plain words"
+  },
+  "banner_base_url": "In this window Claude Code talks to {host}: Remote Control, cloud sessions, the advisor and your organisation's server-managed settings do not work here. Your usual Claude window keeps them all.",
+  "banner_rules": "Rules in this window come from: {sources}.",
+  "banner_key": "The key is read from the system keychain when the window opens; it is never written to a file.",
+  "red_window": "Red window: the model runs on this computer, Ollama's cloud is off and Claude Code sends out nothing it does not need. Remote Control is off in this window only.",
+  "doctor_remote_ok": "Remote Control: available with this setup.",
+  "doctor_remote_off": "Remote Control: unavailable here - {why}.",
+  "doctor_base": "Requests go to: {where}.",
+  "doctor_rules": "Rules that bind this computer: {sources}.",
+  "doctor_advisor_off": "Advisor: off here - {why}.",
+  "policy_denied": "The company policy does not allow {vendor} ({why}).",
+  "crew_refused": "{member} is not started: {why}.",
+  "gateway_people": "A gateway is for scripts and CI only: behind it people would lose Remote Control and the organisation's rules. People get a profile window instead.",
+  "local_none": "No local model server answers on this computer (tried {tried}).",
+  "local_load": "{model}: {single} tokens a second for one request, {total} with {n} at once - enough for about {people} people working with an agent."
+}

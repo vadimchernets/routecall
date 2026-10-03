@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "updated": "2026-10-02",
+  "about": "The crew: other vendors' own command-line agents, each with its own login, that take scripted work while a person keeps their Claude seat. A member runs only on a price-table row whose use is 'automated' (a pay-as-you-go API key): every coding and token plan read on 02.10.2026 forbids non-interactive use, and a subscription's login inside someone else's agent is not taken. 'use' here is a copy of billcall's row, used only when billcall's price table is not on this computer.",
+  "members": {
+    "codex": {
+      "program": "codex",
+      "vendor": "OpenAI",
+      "row": "openai-api-gpt-6-1-sol",
+      "use": "automated",
+      "login": "codex login --with-api-key  (reads the key from standard input; an OpenAI API key, not a ChatGPT sign-in)",
+      "run": ["codex", "exec", "{task}"],
+      "url": "https://developers.openai.com/codex/cli",
+      "checked": "2026-10-02"
+    },
+    "gemini": {
+      "program": "gemini",
+      "vendor": "Google",
+      "row": "google-api-gemini-3-8-flash",
+      "use": "automated",
+      "login": "GEMINI_API_KEY from Google AI Studio, set in the job's environment",
+      "run": ["gemini", "-p", "{task}"],
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "checked": "2026-10-02"
+    },
+    "qwen": {
+      "program": "qwen",
+      "vendor": "Alibaba Cloud",
+      "row": "alibaba-api-qwen3-coder-next",
+      "use": "automated",
+      "login": "a Model Studio pay-as-you-go key (OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL or ~/.qwen/settings.json); headless mode accepts key auth only",
+      "run": ["qwen", "-p", "{task}"],
+      "url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/",
+      "checked": "2026-10-02"
+    },
+    "kimi": {
+      "program": "kimi",
+      "vendor": "Moonshot AI",
+      "row": "moonshot-api-kimi-k2-7-code",
+      "use": "automated",
+      "login": "a Moonshot platform API key in kimi's own configuration (not the Kimi Code membership)",
+      "run": ["kimi", "--quiet", "-p", "{task}"],
+      "url": "https://moonshotai.github.io/kimi-cli/en/customization/print-mode.html",
+      "checked": "2026-10-02",
+      "note": "--print auto-approves every tool call; gatecall lets kimi work only in a training folder."
+    }
+  }
+}

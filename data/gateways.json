@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "updated": "2026-10-02",
+  "about": "Gateways and routers for the company's background work - scripts, CI, nightly jobs. Not for people: a gateway means ANTHROPIC_BASE_URL, and under it Remote Control, cloud sessions, the advisor and the organisation's server-managed settings stop (code.claude.com/docs/en/remote-control, /managed-settings). People keep their claude.ai sign-in and use routecall profiles for a cheap window. Licence, archive state and last push read from the GitHub API on the day below.",
+  "minimum": {
+    "litellm": {
+      "at_least": "1.83.0",
+      "never": ["1.82.7", "1.82.8"],
+      "why": "litellm 1.82.7 and 1.82.8 on PyPI carried a credential stealer (24.03.2026, about 40 minutes live, yanked); 1.83.0 is the first release from the rebuilt pipeline; 1.78.0-1.82.6 were audited clean. Check for litellm_init.pth in site-packages.",
+      "url": "https://docs.litellm.ai/blog/security-update-march-2026",
+      "checked": "2026-10-02"
+    }
+  },
+  "compared": [
+    {"name": "LiteLLM", "repo": "BerriAI/litellm", "license": "MIT (except the enterprise/ folder)", "last_push": "2026-10-03",
+     "kind": "proxy with budgets, keys per team, guardrails (Presidio), many providers", "speaks_anthropic": true,
+     "fits": "the default for scripts and CI: one address, a daily budget, PII masked before it leaves", "routecall": "gateway writes its config"},
+    {"name": "Bifrost", "repo": "maximhq/bifrost", "license": "Apache-2.0", "last_push": "2026-10-03",
+     "kind": "high-throughput gateway in Go", "speaks_anthropic": true,
+     "fits": "when LiteLLM's Python proxy is the bottleneck at high request rates", "routecall": "named; config by its own docs"},
+    {"name": "Higress", "repo": "higress-group/higress", "license": "Apache-2.0", "last_push": "2026-10-03",
+     "kind": "AI gateway on Envoy (Alibaba), with plugins", "speaks_anthropic": true,
+     "fits": "a company that already runs Kubernetes ingress", "routecall": "named"},
+    {"name": "RouteLLM", "repo": "lm-sys/RouteLLM", "license": "Apache-2.0", "last_push": "2024-08-10",
+     "kind": "learned router: a strong or a weak model per request", "speaks_anthropic": false,
+     "fits": "research and offline evaluation; no push since 08.2024 - decidecall's bench is the maintained way to decide per task", "routecall": "named, not configured"},
+    {"name": "claude-code-router", "repo": "musistudio/claude-code-router", "license": "MIT", "last_push": "2026-09-26",
+     "kind": "local router in front of Claude Code, routes by task kind (background, think, long context)", "speaks_anthropic": true,
+     "fits": "one developer's own experiments; it is a BASE_URL too, so not for a person who needs the remote", "routecall": "named"},
+    {"name": "llama-swap", "repo": "mostlygeek/llama-swap", "license": "MIT", "last_push": "2026-10-02",
+     "kind": "swaps local models on demand behind one OpenAI/Anthropic-compatible address", "speaks_anthropic": true,
+     "fits": "the company's own machine: one lead model kept loaded, the rest on call", "routecall": "server writes its config"},
+    {"name": "cc-proxy-plugin", "repo": "betmoar/cc-proxy-plugin", "license": "MIT", "last_push": null,
+     "kind": "Claude Code plugin + local proxy that routes by the model name's prefix (GLM, OpenRouter, Claude side by side)", "speaks_anthropic": true,
+     "fits": "mixing models in one session by model name; same BASE_URL limits", "routecall": "named"},
+    {"name": "opencodex", "repo": "lidge-jun/opencodex", "license": "MIT", "last_push": null,
+     "kind": "provider proxy for Codex and Claude Code", "speaks_anthropic": true,
+     "fits": "a Codex-first team; same BASE_URL limits", "routecall": "named"}
+  ]
+}

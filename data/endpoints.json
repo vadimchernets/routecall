@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "updated": "2026-10-02",
+  "about": "Where each profile points Claude Code: the vendor's own Anthropic-compatible address, the variable that carries the key, and the model names its page gives for Claude Code. Every entry names the page it was read from and the day. The key itself is never stored here or in any file routecall writes: the launcher reads it from the system keychain when the window opens.",
+  "profiles": {
+    "deepseek": {
+      "vendor": "DeepSeek",
+      "provider_words": ["deepseek"],
+      "base_url": "https://api.deepseek.com/anthropic",
+      "auth_var": "ANTHROPIC_API_KEY",
+      "models": {"main": "deepseek-v4-pro", "opus": "deepseek-v4-pro", "sonnet": "deepseek-flash", "haiku": "deepseek-flash"},
+      "price_rows": ["deepseek-api-v4-pro", "deepseek-api-flash"],
+      "jurisdiction": "CN",
+      "notes": ["Claude model names are mapped by DeepSeek: Opus to deepseek-v4-pro, Sonnet and Haiku to deepseek-flash; an unknown name falls back to deepseek-flash.",
+                "Not supported on this endpoint: document blocks, search-result blocks, MCP tool integrations, container uploads, code-execution results.",
+                "Off-peak hours are half price (billcall's price table, row deepseek-api-flash)."],
+      "url": "https://api-docs.deepseek.com/guides/anthropic_api",
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "glm": {
+      "vendor": "Z.ai",
+      "provider_words": ["z.ai", "zai", "zhipu", "glm"],
+      "base_url": "https://api.z.ai/api/anthropic",
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "models": {"main": "GLM-5.3-Flash", "opus": "GLM-5.3-Flash", "sonnet": "GLM-5.3-Flash", "haiku": "GLM-5.3-Flash"},
+      "price_rows": ["zai-api-glm-5-3", "zai-api-glm-5-3-flash"],
+      "jurisdiction": "SG",
+      "notes": ["The page is written for the GLM Coding Plan; a coding plan is for a person at the keyboard, never for scripts (billcall use --for scripts says no). For API work give --model GLM-5.3 or GLM-5.3-Flash with an API key.",
+                "Z.ai processes data in Singapore (plan section 0.3)."],
+      "url": "https://docs.z.ai/devpack/tool/claude",
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "kimi": {
+      "vendor": "Moonshot AI",
+      "provider_words": ["moonshot", "kimi"],
+      "base_url": "https://api.moonshot.ai/anthropic",
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "models": {"main": "kimi-k3[1m]", "opus": "kimi-k3[1m]", "sonnet": "kimi-k3[1m]", "haiku": "kimi-k2.7-code", "fable": "kimi-k3[1m]", "subagent": "kimi-k3[1m]"},
+      "price_rows": ["moonshot-api-kimi-k3", "moonshot-api-kimi-k2-7-code"],
+      "jurisdiction": "CN",
+      "notes": ["Kimi K2.7-code cannot turn thinking off (plan section 0.3).",
+                "By default the Kimi API may use content to improve the service; the company's Kimi Business seat or a host with zero data retention avoids that (plan section 0.3)."],
+      "url": "https://platform.kimi.ai/docs/guide/claude-code-kimi",
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "qwen": {
+      "vendor": "Alibaba Cloud",
+      "provider_words": ["alibaba", "qwen", "dashscope"],
+      "base_url": "https://dashscope-intl.aliyuncs.com/apps/anthropic",
+      "alternatives": {
+        "us": "https://dashscope-us.aliyuncs.com/apps/anthropic",
+        "workspace-singapore": "https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/apps/anthropic",
+        "workspace-us": "https://{WorkspaceId}.us-east-1.maas.aliyuncs.com/apps/anthropic"
+      },
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "models": {"main": "qwen3.7-max", "opus": "qwen3.7-max", "sonnet": "qwen3.7-max", "haiku": "qwen3.6-flash"},
+      "price_rows": ["alibaba-api-qwen3-8-max", "alibaba-api-qwen3-8-flash", "alibaba-api-qwen3-coder-next"],
+      "jurisdiction": "SG",
+      "notes": ["The key type must match the address: a pay-as-you-go key with a pay-as-you-go address, or the vendor answers 401.",
+                "The page names qwen3.7-max and qwen3.6-flash for Claude Code; the price table prices qwen3.8. Give --model to use another name the vendor lists."],
+      "url": "https://www.alibabacloud.com/help/en/model-studio/claude-code",
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "minimax": {
+      "vendor": "MiniMax",
+      "provider_words": ["minimax"],
+      "base_url": "https://api.minimax.io/anthropic",
+      "alternatives": {"china": "https://api.minimax.cn/anthropic"},
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "models": {"main": "MiniMax-M3[1m]", "opus": "MiniMax-M3[1m]", "sonnet": "MiniMax-M3[1m]", "haiku": "MiniMax-M3[1m]"},
+      "extra_env": {"CLAUDE_CODE_AUTO_COMPACT_WINDOW": "1000000"},
+      "price_rows": ["minimax-api-m3"],
+      "jurisdiction": "CN",
+      "notes": ["The page sets CLAUDE_CODE_AUTO_COMPACT_WINDOW to 1000000 to match the model's context window."],
+      "url": "https://platform.minimax.io/docs/token-plan/claude-code",
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "mimo": {
+      "vendor": "Xiaomi",
+      "provider_words": ["xiaomi", "mimo"],
+      "base_url": "https://api.xiaomimimo.com/anthropic",
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "models": {"main": "mimo-v2.6-pro", "opus": "mimo-v2.6-pro", "sonnet": "mimo-v2.6-pro", "haiku": "mimo-v2.6-flash"},
+      "price_rows": ["xiaomi-api-mimo-v2-6-pro", "xiaomi-api-mimo-v2-6-flash"],
+      "jurisdiction": "CN",
+      "notes": ["Pay-as-you-go address; the Token Plan has its own address on the same page."],
+      "url": "https://mimo.mi.com/docs/en-US/quick-start/summary/first-api-call",
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "local": {
+      "vendor": "this computer",
+      "provider_words": [],
+      "base_url": "http://localhost:11434",
+      "alternatives": {"lmstudio": "http://localhost:1234", "llama-swap": "http://localhost:8080"},
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "local_token": "ollama",
+      "models": {},
+      "price_rows": [],
+      "jurisdiction": "here",
+      "notes": ["Ollama (0.15 or later) speaks the Anthropic Messages API on port 11434; `ollama launch claude` sets Claude Code up by itself.",
+                "LM Studio (0.4.1 or later) speaks /v1/messages on port 1234 (token: lmstudio); llama.cpp's server and llama-swap (MIT) do too.",
+                "The model name is taken from what the local server lists; give --model to choose."],
+      "url": "https://docs.ollama.com/quickstart",
+      "also": ["https://lmstudio.ai/docs/integrations/claude-code", "https://github.com/mostlygeek/llama-swap"],
+      "checked": "2026-10-02",
+      "status": "official"
+    },
+    "local-red": {
+      "vendor": "this computer, nothing leaves",
+      "provider_words": [],
+      "base_url": "http://localhost:11434",
+      "alternatives": {"lmstudio": "http://localhost:1234", "llama-swap": "http://localhost:8080"},
+      "auth_var": "ANTHROPIC_AUTH_TOKEN",
+      "local_token": "ollama",
+      "models": {},
+      "price_rows": [],
+      "jurisdiction": "here",
+      "red": true,
+      "window_env": {"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"},
+      "launcher_env": {"OLLAMA_NO_CLOUD": "1"},
+      "notes": ["OLLAMA_NO_CLOUD=1 turns off Ollama's cloud models and features (docs.ollama.com/faq; in ~/.ollama/server.json the same is \"disable_ollama_cloud\": true).",
+                "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC is set in this window only: it also turns off Remote Control, so it never goes into the person's own settings.",
+                "A firewall that allows Claude Code only 127.0.0.1 closes the last door: LuLu (objective-see, GPL-3.0, free) on a Mac, Windows Defender Firewall outbound rules on Windows."],
+      "url": "https://docs.ollama.com/faq",
+      "also": ["https://code.claude.com/docs/en/remote-control", "https://github.com/objective-see/LuLu"],
+      "checked": "2026-10-02",
+      "status": "official"
+    }
+  },
+  "claude_code_facts": {
+    "remote_control": {
+      "says": ["Remote Control: Pro, Max, Team and Enterprise plans; API keys are not supported.",
+               "Remote Control is unavailable when ANTHROPIC_BASE_URL points at a host other than api.anthropic.com, and on Bedrock, Google Cloud's Agent Platform or Microsoft Foundry.",
+               "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC or DISABLE_GROWTHBOOK make Remote Control unavailable.",
+               "DISABLE_TELEMETRY or DO_NOT_TRACK alone leave it available (Claude Code 2.1.283 or later) unless the organisation requires Trusted Devices."],
+      "url": "https://code.claude.com/docs/en/remote-control",
+      "checked": "2026-10-02"
+    },
+    "server_managed_settings": {
+      "says": ["Claude Code fetches server-managed settings only when the session authenticates to Anthropic's API directly; when ANTHROPIC_BASE_URL points somewhere else it starts at the next source: MDM policy, then managed-settings.json with managed-settings.d/*.json."],
+      "url": "https://code.claude.com/docs/en/managed-settings",
+      "checked": "2026-10-02"
+    },
+    "advisor": {
+      "says": ["The advisor tool requires the Anthropic API; through ANTHROPIC_BASE_URL it works only if the gateway forwards the request intact.",
+               "It is switched on by a feature flag Claude Code fetches; with DISABLE_TELEMETRY set, the advisor stays off.",
+               "Set it with /advisor, the advisorModel setting or --advisor; an advisor must rank at or above the main model (Haiku can call it, not be it)."],
+      "url": "https://code.claude.com/docs/en/advisor",
+      "checked": "2026-10-02"
+    },
+    "model_config": {
+      "says": ["opusplan: Opus in plan mode, Sonnet for execution.",
+               "CLAUDE_CODE_SUBAGENT_MODEL sets the default model of subagents, agent-team teammates and workflow agents; a definition's model field wins.",
+               "ANTHROPIC_DEFAULT_OPUS_MODEL, _SONNET_MODEL, _HAIKU_MODEL and _FABLE_MODEL map the aliases to a provider's model names."],
+      "url": "https://code.claude.com/docs/en/model-config",
+      "checked": "2026-10-02"
+    }
+  }
+}
