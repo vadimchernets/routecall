@@ -1,0 +1,17 @@
+{
+  "name": "日本語",
+  "banner_base_url": "このウィンドウでは Claude Code は {host} と通信します。Remote Control、クラウドセッション、アドバイザー、組織のサーバー管理設定はここでは動作しません。いつもの Claude ウィンドウではすべてそのまま使えます。",
+  "banner_rules": "このウィンドウのルールの出どころ: {sources}。",
+  "banner_key": "キーはウィンドウを開くときにシステムのキーチェーンから読み込まれ、ファイルには書き込まれません。",
+  "red_window": "赤いウィンドウ: モデルはこのコンピューター上で動き、Ollama のクラウドはオフで、Claude Code は不要なものを一切送信しません。Remote Control はこのウィンドウだけオフです。",
+  "doctor_remote_ok": "Remote Control: この構成で利用できます。",
+  "doctor_remote_off": "Remote Control: ここでは利用できません - {why}。",
+  "doctor_base": "リクエストの送信先: {where}。",
+  "doctor_rules": "このコンピューターに適用されるルール: {sources}。",
+  "doctor_advisor_off": "アドバイザー: ここではオフ - {why}。",
+  "policy_denied": "会社のポリシーにより {vendor} は許可されていません（{why}）。",
+  "crew_refused": "{member} は起動されません: {why}。",
+  "gateway_people": "ゲートウェイはスクリプトと CI 専用です。その先では人が Remote Control と組織のルールを失います。人にはその代わりにプロファイルウィンドウが渡されます。",
+  "local_none": "このコンピューターでは、ローカルのモデルサーバーが応答しません（試行: {tried}）。",
+  "local_load": "{model}: 1件のリクエストで毎秒 {single} トークン、{n} 件同時で {total} - エージェントと作業するおよそ {people} 人に十分です。"
+}

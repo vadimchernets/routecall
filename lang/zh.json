@@ -1,0 +1,17 @@
+{
+  "name": "中文",
+  "banner_base_url": "在这个窗口中，Claude Code 与 {host} 通信：Remote Control、云端会话、顾问以及您所在组织的服务器托管设置在这里不起作用。您平时的 Claude 窗口会保留所有这些功能。",
+  "banner_rules": "这个窗口的规则来自：{sources}。",
+  "banner_key": "密钥在窗口打开时从系统钥匙串读取，绝不会写入文件。",
+  "red_window": "红色窗口：模型在这台电脑上运行，Ollama 的云端已关闭，Claude Code 不会发送任何它不需要的内容。Remote Control 仅在这个窗口中关闭。",
+  "doctor_remote_ok": "Remote Control：此配置下可用。",
+  "doctor_remote_off": "Remote Control：此处不可用 - {why}。",
+  "doctor_base": "请求发送到：{where}。",
+  "doctor_rules": "适用于这台电脑的规则：{sources}。",
+  "doctor_advisor_off": "顾问：此处已关闭 - {why}。",
+  "policy_denied": "公司策略不允许使用 {vendor}（{why}）。",
+  "crew_refused": "{member} 未启动：{why}。",
+  "gateway_people": "网关仅用于脚本和 CI：在网关之后，人们会失去 Remote Control 和组织的规则。人们会改用配置文件窗口。",
+  "local_none": "这台电脑上没有本地模型服务器响应（已尝试 {tried}）。",
+  "local_load": "{model}：单个请求每秒 {single} 个 token，{n} 个同时请求共 {total} 个 - 足够约 {people} 人使用智能体工作。"
+}

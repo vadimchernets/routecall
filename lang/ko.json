@@ -1,0 +1,17 @@
+{
+  "name": "한국어",
+  "banner_base_url": "이 창에서 Claude Code는 {host}와 통신합니다. Remote Control, 클라우드 세션, 어드바이저, 조직의 서버 관리 설정은 여기서 작동하지 않습니다. 평소 쓰는 Claude 창에서는 모두 그대로 유지됩니다.",
+  "banner_rules": "이 창의 규칙 출처: {sources}.",
+  "banner_key": "키는 창을 열 때 시스템 키체인에서 읽으며, 파일에는 절대 기록되지 않습니다.",
+  "red_window": "빨간 창: 모델이 이 컴퓨터에서 실행되고, Ollama 클라우드는 꺼져 있으며, Claude Code는 필요하지 않은 것은 아무것도 보내지 않습니다. Remote Control은 이 창에서만 꺼져 있습니다.",
+  "doctor_remote_ok": "Remote Control: 이 설정에서 사용할 수 있습니다.",
+  "doctor_remote_off": "Remote Control: 여기서는 사용할 수 없습니다 - {why}.",
+  "doctor_base": "요청이 가는 곳: {where}.",
+  "doctor_rules": "이 컴퓨터에 적용되는 규칙: {sources}.",
+  "doctor_advisor_off": "어드바이저: 여기서는 꺼짐 - {why}.",
+  "policy_denied": "회사 정책상 {vendor}은(는) 허용되지 않습니다({why}).",
+  "crew_refused": "{member}은(는) 시작되지 않았습니다: {why}.",
+  "gateway_people": "게이트웨이는 스크립트와 CI 전용입니다. 그 뒤에서는 사람들이 Remote Control과 조직의 규칙을 잃게 됩니다. 사람들에게는 대신 프로필 창이 제공됩니다.",
+  "local_none": "이 컴퓨터에서 응답하는 로컬 모델 서버가 없습니다(시도: {tried}).",
+  "local_load": "{model}: 요청 하나에 초당 {single} 토큰, {n}개 동시 처리 시 {total} - 에이전트와 함께 일하는 약 {people}명에게 충분합니다."
+}

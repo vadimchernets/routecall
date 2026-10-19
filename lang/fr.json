@@ -1,0 +1,17 @@
+{
+  "name": "Français",
+  "banner_base_url": "Dans cette fenêtre, Claude Code parle à {host} : Remote Control, les sessions cloud, l'advisor et les réglages gérés par le serveur de votre organisation ne fonctionnent pas ici. Votre fenêtre Claude habituelle les garde tous.",
+  "banner_rules": "Les règles de cette fenêtre viennent de : {sources}.",
+  "banner_key": "La clé est lue dans le trousseau du système à l'ouverture de la fenêtre ; elle n'est jamais écrite dans un fichier.",
+  "red_window": "Fenêtre rouge : le modèle tourne sur cet ordinateur, le cloud d'Ollama est coupé et Claude Code n'envoie rien dont il n'a pas besoin. Remote Control est coupé dans cette fenêtre seulement.",
+  "doctor_remote_ok": "Remote Control : disponible avec cette configuration.",
+  "doctor_remote_off": "Remote Control : indisponible ici - {why}.",
+  "doctor_base": "Les requêtes vont à : {where}.",
+  "doctor_rules": "Règles qui s'appliquent à cet ordinateur : {sources}.",
+  "doctor_advisor_off": "Advisor : désactivé ici - {why}.",
+  "policy_denied": "La politique de l'entreprise n'autorise pas {vendor} ({why}).",
+  "crew_refused": "{member} n'est pas démarré : {why}.",
+  "gateway_people": "Une passerelle est réservée aux scripts et à la CI : derrière elle, les gens perdraient Remote Control et les règles de l'organisation. Les gens reçoivent à la place une fenêtre de profil.",
+  "local_none": "Aucun serveur de modèles local ne répond sur cet ordinateur (essayé : {tried}).",
+  "local_load": "{model} : {single} tokens par seconde pour une requête, {total} avec {n} à la fois - assez pour environ {people} personnes travaillant avec un agent."
+}

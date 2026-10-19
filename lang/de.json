@@ -1,0 +1,17 @@
+{
+  "name": "Deutsch",
+  "banner_base_url": "In diesem Fenster spricht Claude Code mit {host}: Remote Control, Cloud-Sitzungen, der Advisor und die servergesteuerten Einstellungen Ihrer Organisation funktionieren hier nicht. Ihr gewohntes Claude-Fenster behält sie alle.",
+  "banner_rules": "Die Regeln in diesem Fenster stammen aus: {sources}.",
+  "banner_key": "Der Schlüssel wird beim Öffnen des Fensters aus dem System-Schlüsselbund gelesen; er wird nie in eine Datei geschrieben.",
+  "red_window": "Rotes Fenster: Das Modell läuft auf diesem Computer, Ollamas Cloud ist aus, und Claude Code sendet nichts, was es nicht braucht. Remote Control ist nur in diesem Fenster aus.",
+  "doctor_remote_ok": "Remote Control: mit dieser Einrichtung verfügbar.",
+  "doctor_remote_off": "Remote Control: hier nicht verfügbar - {why}.",
+  "doctor_base": "Anfragen gehen an: {where}.",
+  "doctor_rules": "Regeln, die für diesen Computer gelten: {sources}.",
+  "doctor_advisor_off": "Advisor: hier aus - {why}.",
+  "policy_denied": "Die Firmenrichtlinie erlaubt {vendor} nicht ({why}).",
+  "crew_refused": "{member} wird nicht gestartet: {why}.",
+  "gateway_people": "Ein Gateway ist nur für Skripte und CI: dahinter würden Personen Remote Control und die Regeln der Organisation verlieren. Personen bekommen stattdessen ein Profilfenster.",
+  "local_none": "Auf diesem Computer antwortet kein lokaler Modellserver (versucht: {tried}).",
+  "local_load": "{model}: {single} Tokens pro Sekunde bei einer Anfrage, {total} bei {n} gleichzeitig - genug für etwa {people} Personen, die mit einem Agenten arbeiten."
+}
