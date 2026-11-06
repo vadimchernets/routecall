@@ -1,5 +1,7 @@
 # routecall
 
+> Poly helped? [Give it a star on GitHub](https://github.com/vadimchernets/routecall) - one click. The plugin is open to everyone either way.
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23116728.svg)](https://doi.org/10.5281/zenodo.23116728)
 
 The strong model thinks, cheap and local models work — and nobody loses the remote on their phone. A
