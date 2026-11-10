@@ -62,6 +62,17 @@ Model Studio `dashscope-intl.aliyuncs.com/apps/anthropic` (US and workspace addr
   `tests/test_routecall.py`. The author's Mac ran no local server that day, and `local load` answered with exit 3
   and the install line for Ollama.
 
+## Installing
+
+From the Poly A1 catalogue, by its link - no git and no account needed:
+
+```
+/plugin marketplace add https://github.com/vadimchernets/poly-a1-plugins/releases/latest/download/marketplace.json
+/plugin install routecall@poly-a1
+```
+
+If that address does not answer, the same file is at `https://raw.githubusercontent.com/vadimchernets/poly-a1-plugins/main/.claude-plugin/marketplace.json`.
+
 ## What it needs
 
 Python 3.8+ and its standard library — no dependencies, no network module; curl for talking to a local model server.
